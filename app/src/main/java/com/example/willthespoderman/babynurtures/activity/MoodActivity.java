@@ -9,10 +9,11 @@ import com.example.willthespoderman.babynurtures.R;
  * Created by Darren Portilla on 09/10/2016.
  */
 
-public class PlayingActivity extends AppCompatActivity {
+public class MoodActivity  extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_actplay);
-    }
+            setContentView(R.layout.activity_actmood);
+
+        }
 }

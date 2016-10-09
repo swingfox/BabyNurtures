@@ -36,6 +36,8 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.example.willthespoderman.babynurtures.R.drawable.v;
+
 public class MainActivity extends Activity implements View.OnClickListener{
 
     private TextView txtName;
@@ -189,15 +191,15 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        switch(v.getId()){
+        switch(v.getId()) {
 
             case R.id.Notification:
                 startActivity(new Intent(this, Notification.class));
-                 break;
+                break;
 
             case R.id.Profile:
-               // startActivity(new Intent(this, babylist.class));
-                final String names[] = {"Parent","Baby Sitter","Baby Profile" };
+                // startActivity(new Intent(this, babylist.class));
+                final String names[] = {"Parent", "Baby Sitter", "Baby Profile"};
 
                 final AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
                 LayoutInflater inflater = getLayoutInflater();
@@ -210,10 +212,12 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
                 final Intent intent = new Intent(MainActivity.this, babylist.class);
                 final SharedPreferences sharedPreferences = getSharedPreferences("BabyLogin", Context.MODE_PRIVATE);
-                final String firstTime = sharedPreferences.getString("keyFirstTime","");
+                final String firstTime = sharedPreferences.getString("keyFirstTime", "");
 
-                if(firstTime.equals("Yes")){
+                if (firstTime.equals("Yes")) {
                     names[0] = "Create New Baby Sitter Account";
+
+
 
                 /*}else {
 
@@ -230,20 +234,18 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
 
                         if (item == names[2]) { // LOGOUT
-                            startActivity(new Intent(MainActivity.this,babylist.class));
-                     //       logoutUser();
-                     //       finish();
+                            startActivity(new Intent(MainActivity.this, babylist.class));
+                            //       logoutUser();
+                            //       finish();
 
-                        }
-                        else if (item == names[1]) { // HISTORY
+                        } else if (item == names[1]) { // HISTORY
 
-                            startActivity(new Intent(MainActivity.this,History.class));
+                            startActivity(new Intent(MainActivity.this, History.class));
 
-                        }
-                        else if(item == names[0]&& names[0].equals("Baby Profile")){
-                          //  intent.putExtra("keyUser",sharedPreferences.getString("keyName",""));
+                        } else if (item == names[0] && names[0].equals("Baby Profile")) {
+                            //  intent.putExtra("keyUser",sharedPreferences.getString("keyName",""));
                             startActivity(intent);
-                        }else{
+                        } else {
                             adapter.notifyDataSetChanged();
                             Toast.makeText(MainActivity.this, names[0] + "  Updated", Toast.LENGTH_LONG).show();
                         }
@@ -254,16 +256,21 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 levelDialog.show();
 
 
-                 break;
+                break;
 
             case R.id.Todolist:
                 startActivity(new Intent(this, Choose_Child.class));
                 break;
+
+
+            case R.id.message:
+                startActivity(new Intent(this, MessageActivity.class));
+                break;
+
+
 //            case R.id.Status:
 //                startActivity(new Intent(this, Choose_Child_Task.class));
 //                break;
-
-
         }
 
     }

@@ -57,6 +57,7 @@ public class BabysitterAct extends AppCompatActivity implements View.OnClickList
 
         btnEat = (Button) findViewById(R.id.btnEat);
         btnEat.setOnClickListener(this);
+
         btnPlaying = (Button) findViewById(R.id.btnPlaying);
         btnPlaying.setOnClickListener(this);
 
@@ -73,9 +74,8 @@ public class BabysitterAct extends AppCompatActivity implements View.OnClickList
     }
 
     public void showDiaper(View v) {
-        FragmentManager manager = getSupportFragmentManager();
-        Diaper dialog = new Diaper();
-        dialog.show(manager, "dialog");
+        Intent i = new Intent(this,EatingActivity.class);
+        startActivity(i);
     }
 
     public void showPlaying(View v) {
@@ -84,15 +84,13 @@ public class BabysitterAct extends AppCompatActivity implements View.OnClickList
     }
 
     public void showSleepingDialog(View v) {
-        FragmentManager manager = getSupportFragmentManager();
-        SleepingDialog dialog = new SleepingDialog();
-        dialog.show(manager, "dialog");
+        Intent i = new Intent(this,SleepingActivity.class);
+        startActivity(i);
     }
 
     public void showMoodDialog(View v) {
-        FragmentManager manager = getSupportFragmentManager();
-        MoodDialog dialog = new MoodDialog();
-        dialog.show(manager, "dialog");
+        Intent i = new Intent(this,MoodActivity.class);
+        startActivity(i);
     }
 
     @Override
@@ -132,11 +130,12 @@ public class BabysitterAct extends AppCompatActivity implements View.OnClickList
             showMoodDialog(v);
         }
 
-        else if (v.getId() == R.id.btnEat) {
+        if (v.getId() == R.id.btnEat) {
             showDiaper(v);
-            action = "Done changing diaper";
-            String url ="http://172.31.11.32:80/android_login_api/notification.php";
-            stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+          //  action = "Done changing diaper";
+           String url ="http://172.31.11.32:80/android_login_api/notification.php";
+            stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>()
+            {
                 @Override
                 public void onResponse(String s) {
                     Log.e("Error", s.toString());

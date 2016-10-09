@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:scaleType="fitXY"
+        android:text="New Message"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:id="@+id/btnNewmessage"
+        android:paddingRight="220dp"
+        android:minHeight="80dp"
+        android:textSize="18sp"
+        android:background="@drawable/bgsx" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listofmessage"
+        android:clipToPadding="true" />
+</LinearLayout>

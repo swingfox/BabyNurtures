@@ -9,10 +9,13 @@ import com.example.willthespoderman.babynurtures.R;
  * Created by Darren Portilla on 09/10/2016.
  */
 
-public class PlayingActivity extends AppCompatActivity {
+public class EatingActivity extends AppCompatActivity {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_actplay);
+    protected void onCreate(Bundle saveInstanceState){
+        super.onCreate(saveInstanceState);
+        setContentView(R.layout.activity_acteat);
+
     }
+
+
 }
