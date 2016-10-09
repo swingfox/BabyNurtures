@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    android:orientation="vertical"
+    android:padding="20sp">
+
+
+
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Welcome Babysitter!"
+        android:textStyle="bold"
+        android:textSize="20dp"
+
+
+        />
+
+    <TextView
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="  Click To-do-List to view your Todays task!"
+
+
+        />
+
+
+
+
+
+        <ImageView
+            android:id="@+id/Todolist"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@mipmap/todolisticon" />
+
+
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_marginTop="50dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#888888"
+        android:background="#3b4148"
+        android:text="logout" />
+
+
+
+
+
+
+
+
+
+</LinearLayout>

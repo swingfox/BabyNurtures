@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.willthespoderman.babynurtures" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!--
+          IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+          to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission
+        android:name="com.example.willthespoderman.babynurtures.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.willthespoderman.babynurtures.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".app.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activity.Choose_User"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity$RegisterActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PlayingActivity"
+            android:label="Playing Activity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.todolist"
+            android:label="@string/title_activity_todolist"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.Notification"
+            android:label="@string/title_activity_notification"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.profile"
+            android:label="@string/title_activity_profile"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.MaidActivity"
+            android:label="@string/title_activity_maid"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.maidlist"
+            android:label="@string/title_activity_maidlist"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.babylist"
+            android:label="@string/title_activity_babylist"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.BabyRegister"
+            android:label="@string/title_activity_baby_register"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.Choose_Child"
+            android:label="@string/title_activity_choose__child"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.Choose_Child_Task"
+            android:label="@string/title_activity_choose__child__task"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.Babysitter_Register"
+            android:label="@string/title_activity_babysitter__register"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_activity_choose__user"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.Babysitter_Login"
+            android:label="@string/title_activity_babysitter__login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.Babysitter_Main"
+            android:label="@string/title_activity_babysitter__main"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.Babysitter_List"
+            android:label="@string/title_activity_babysitter__list" >
+        </activity>
+        <!--
+        <activity
+            android:name=".activity.Activitys"
+            android:label="@string/title_activity_activitys" >
+        </activity>
+        -->
+        <activity
+            android:name=".activity.BabysitterAct"
+            android:label="@string/title_activity_babysitter" >
+        </activity>
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver
+            android:name=".receiver.CustomPushReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!-- IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
+                <category android:name="com.example.willthespoderman.babynurtures" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+        <activity
+            android:name=".Timer"
+            android:label="@string/title_activity_timer"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        -->
+        <activity
+            android:name=".activity.EditProfile"
+            android:label="@string/title_activity_edit_profile"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <!-- <activity -->
+        <!-- android:name=".Notification_List" -->
+        <!-- android:label="@string/title_activity_notification__list" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" > -->
+        <!-- </activity> -->
+        <activity
+            android:name=".activity.History"
+            android:label="@string/title_activity_history"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity android:name=".EditTodoActivity" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,258 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bgsx"
+    tools:context="com.example.edmore.practice.Profile"
+    >
+
+
+
+
+    <LinearLayout
+
+        android:layout_width="128dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        >
+
+
+
+        <!--<com.android.volley.toolbox.NetworkImageView-->
+            <!--android:id="@+id/thumbnails"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:layout_weight="70"-->
+            <!--android:layout_margin="10dp"-->
+
+            <!--/>-->
+
+        <com.example.willthespoderman.babynurtures.activity.CircleImageView
+
+
+            android:id="@+id/thumbnails"
+            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_margin="8dp"
+            android:layout_centerInParent="true"
+
+             />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/setName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffff"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/setCity"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffff"
+            android:layout_marginBottom="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/setCountry"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffff"
+            android:layout_marginBottom="10dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        >
+
+        <Button
+
+            android:id="@+id/btnUploadPhoto"
+            android:layout_width="160dp"
+            android:layout_weight="50"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#176CEC"
+            android:textColor="#ffff"
+            android:text="Upload Picture"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            />
+
+        <Button
+
+            android:id="@+id/btnUpadteProfile"
+            android:layout_weight="50"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#176CEC"
+            android:textColor="#ffff"
+            android:text="Update Profile"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Birthday"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#39add1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:layout_marginLeft="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/setBirthday"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Height"
+                android:layout_weight="50"
+                android:textColor="#39add1"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:layout_weight="50"
+                android:textColor="#39add1"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:paddingLeft="20dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:hint=""
+                android:layout_weight="50"
+                android:id="@+id/setHeight"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:id="@+id/setWeight"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nationality"
+            android:layout_marginLeft="20dp"
+            android:textColor="#39add1"
+            android:layout_marginTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:hint=""
+            android:id="@+id/setNationality"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:layout_marginLeft="20dp"
+            android:textColor="#39add1"
+            android:layout_marginTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:hint=""
+            android:layout_marginLeft="20dp"
+            android:id="@+id/setGender"/>
+
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+

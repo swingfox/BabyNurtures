@@ -1,0 +1,179 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/beegee"
+    android:orientation="vertical"
+    android:padding="20sp">
+
+
+
+
+    <TextView
+        android:id="@+id/labellist"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Today's List to do"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/babyName"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text=""
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+
+    <TableLayout
+        android:id="@+id/todolist"
+        android:layout_width="fill_parent"
+        android:layout_height="602dp"
+        >
+
+
+
+
+
+
+
+
+
+        <TableRow
+            android:weightSum="100"
+            >
+
+            <TextView
+                android:id="@+id/labelstart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:text="Time"
+                android:textSize="20dp"
+
+                android:textStyle="bold"
+                android:layout_span="1" />
+
+            <TextView
+                android:id="@+id/labelend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="Task"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_span="1" />
+
+            <TextView
+                android:id="@+id/labeltask"
+                android:layout_weight="30"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_span="1" />
+
+
+
+
+
+
+
+        </TableRow>
+
+
+        <!-- <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+           >
+
+            <Button
+                android:id="@+id/bClear"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="#888888"
+                android:background="#3b4148"
+                android:text="Clear"
+                android:gravity="center" />
+
+        </LinearLayout>-->
+
+
+    </TableLayout>
+
+    <LinearLayout
+        android:weightSum="100"
+        android:paddingTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_weight="80"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Feedback:"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+
+            />
+        <EditText
+            android:id="@+id/todoSend"
+            android:layout_weight="20"
+            android:background="#ffffff"
+            android:textCursorDrawable="@null"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:inputType="text"
+            android:hint=""
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+android:orientation="vertical"
+android:layout_height="wrap_content"
+android:layout_width="wrap_content"
+>
+
+    <Button
+        android:id="@+id/bApply"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textColor="#888888"
+        android:background="#3b4148"
+        android:text="SEND"
+        />
+
+
+
+</LinearLayout>
+
+
+</LinearLayout>
+    </ScrollView>

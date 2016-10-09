@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Baby Nurture</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_register__form">Register Form</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_todolist">To-do-list</string>
+    <string name="title_activity_status">Status</string>
+    <string name="title_activity_notification">Notification</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_maid">Baby Nurture</string>
+    <string name="title_activity_parent">Baby Nurture</string>
+    <string name="title_activity_maidlist">Baby Nurture</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="welcome">Welcome</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="name">Fullname</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="title_activity_babylist">Baby Nurture</string>
+    <string name="title_activity_baby_register">BabyRegister</string>
+    <string name="title_activity_choose__child">Choose_Child</string>
+    <string name="title_activity_choose__child__task">Choose_Child_Task</string>
+    <string name="title_activity_babysitter__register">Babysitter_Register</string>
+    <string name="title_activity_choose__user">Choose_User</string>
+    <string name="title_activity_babysitter__login">Babysitter_Login</string>
+    <string name="title_activity_babysitter__main">Babysitter_Main</string>
+    <string name="title_activity_babysitter__list">Babysitter_List</string>
+    <string name="title_activity_activitys">Activitys</string>
+    <string name="title_activity_babysitter">BabysitterAct</string>
+    <string name="title_activity_timers">Timers</string>
+
+
+
+
+   <!-- <string name="app_name">AndroidTimerExample</string>
+    <string name="action_settings">Settings</string>-->
+    <!--<string name="hello_world">Hello world!</string>-->
+    <string name="timerVal">00:00:00</string>
+    <string name="pauseButtonLabel">Pause</string>
+    <string name="startButtonLabel">Start</string>
+    <string name="title_activity_timer">Timer</string>
+    <string name="title_activity_edit_profile">EditProfile</string>
+    <string name="title_activity_notification__list">Notification_List</string>
+    <string name="title_activity_history">History</string>
+
+
+</resources>

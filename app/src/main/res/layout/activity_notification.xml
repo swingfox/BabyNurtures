@@ -1,0 +1,62 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:background="#ffffff"
+
+        >
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:padding="20dp"
+            android:layout_weight="100"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/profile"
+            android:textColor="#ffff"
+            android:text="Notification"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            />
+
+
+    </LinearLayout>
+<!--
+    <com.daimajia.swipe.SwipeLayout
+        xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        swipe:leftEdgeSwipeOffset="0dp"
+        swipe:rightEdgeSwipeOffset="0dp"> -->
+    <ListView
+        android:id="@+id/list_notif"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_row_selector" />
+   <!-- </com.daimajia.swipe.SwipeLayout> -->
+
+    <TextView
+        android:id="@+id/NoResult"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="45dp"
+        android:text=""
+        android:textStyle="bold"/>
+
+</LinearLayout>

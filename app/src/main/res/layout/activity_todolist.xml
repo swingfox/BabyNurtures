@@ -1,0 +1,205 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/beegee"
+    android:orientation="vertical"
+    android:padding="20sp">
+
+
+
+
+    <TextView
+        android:id="@+id/labellist"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="To-do-List"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:id="@+id/BabyName"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text=""
+        android:textSize="30dp"
+        android:textStyle="bold"
+        />
+
+
+
+    <TableLayout
+              android:id="@+id/tablelayout1"
+              android:layout_width="fill_parent"
+              android:layout_height="280dp"
+              >
+
+              <LinearLayout
+                  android:weightSum="100"
+                  android:paddingTop="20dp"
+                  android:orientation="horizontal"
+                  >
+
+                  <TextView
+                      android:id="@+id/labeltask"
+                      android:layout_weight="80"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Task:"
+                      android:textSize="20dp"
+                      android:textStyle="bold"
+
+
+                      />
+                  <EditText
+                      android:id="@+id/todoTask"
+                      android:layout_weight="20"
+                      android:background="#ffffff"
+                      android:textCursorDrawable="@null"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:padding="8dp"
+                      android:singleLine="true"
+                      android:inputType="text"
+                      android:hint=""
+
+                      />
+              </LinearLayout>
+
+              <TableRow
+                  android:weightSum="100"
+                  android:layout_marginTop="15dp"
+                  >
+
+                <TextView
+                    android:id="@+id/labelstart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:text="Time Start"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/labelend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:text="Time End"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    />
+
+            </TableRow>
+
+
+
+            <TableRow
+                android:weightSum="100"
+                >
+
+                <Spinner
+                    android:id="@+id/todoStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown"
+                    android:layout_weight="50"
+                    />
+
+                <Spinner
+                    android:id="@+id/todoEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown"
+                    android:layout_weight="50"
+                    />
+
+
+
+            </TableRow>
+
+
+
+
+        <Button
+            android:id="@+id/bSave"
+            android:layout_marginTop="20dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#888888"
+            android:background="#3b4148"
+            android:text="Save"
+            />
+    </TableLayout>
+
+
+
+    <TableLayout
+        android:id="@+id/todolist"
+        android:layout_width="fill_parent"
+        android:layout_height="602dp"
+        >
+
+
+        <TableRow
+            android:weightSum="100"
+            >
+
+            <TextView
+                android:id="@+id/labeltime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="15"
+                android:text="Time"
+                android:textSize="20dp"
+
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/labeltasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="35"
+                android:text="Task"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/labelstat"
+                android:layout_weight="35"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status:"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+
+
+
+
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+
+
+</LinearLayout>
+</ScrollView>

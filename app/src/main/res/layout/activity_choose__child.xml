@@ -1,0 +1,55 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:background="#ffffff"
+
+        >
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:padding="20dp"
+            android:layout_weight="100"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/beegee"
+            android:textColor="#ffff"
+            android:text="Choose Child to put a Task"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            />
+
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/list_of_baby"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_row_selector" />
+
+    <TextView
+        android:id="@+id/NoResult"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="45dp"
+        android:text=""
+        android:textStyle="bold"/>
+
+
+</LinearLayout>
