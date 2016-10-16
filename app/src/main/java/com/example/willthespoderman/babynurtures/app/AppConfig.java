@@ -9,7 +9,7 @@ public class AppConfig {
 
     //XAMP SERVER
 
-    public static String ip = "http://192.168.1.33:80/";
+    public static String ip = "http://192.168.15.4:80/";
     public static String URL_LOGIN = ip+"android_login_api/";
     public static String URL_REGISTER = ip+"android_login_api/";
     public static String URL_TODO = ip+"android_login_api/";

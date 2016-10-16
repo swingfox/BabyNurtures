@@ -5,6 +5,14 @@
     android:orientation="vertical"
     >
 
+    <ListView
+        android:id="@+id/list_of_task"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_row_selector" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,14 +39,6 @@
 
     </LinearLayout>
 
-
-    <ListView
-        android:id="@+id/list_of_task"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:divider="@color/list_divider"
-        android:dividerHeight="1dp"
-        android:listSelector="@drawable/list_row_selector" />
 
     <TextView
         android:id="@+id/NoResult"

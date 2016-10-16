@@ -39,7 +39,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:id="@+id/editTextTypehere"
+            android:id="@+id/txtMessage"
             android:textCursorDrawable="@null"
             android:hint="Type Here .."
             android:textSize="23dp"
@@ -53,7 +53,7 @@
             android:layout_height="50dp"
             android:text="Send"
             android:textSize="20dp"
-            android:id="@+id/buttonSave"
+            android:id="@+id/btnSend"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
 

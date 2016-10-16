@@ -29,6 +29,7 @@ import com.example.willthespoderman.babynurtures.app.AppController;
 import com.example.willthespoderman.babynurtures.app.NotificationBackgroundTask;
 import com.example.willthespoderman.babynurtures.app.NotificationControl;
 import com.example.willthespoderman.babynurtures.helper.SessionManager;
+import com.example.willthespoderman.babynurtures.notificationswipe.RecyclerViewExample;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -58,10 +59,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
     //    if(getIntent().hasExtra("messages")){
       //      String[] messages = this.getIntent().getExtras().getStringArray("messages");
         //    if(messages!=null && messages.length>0) {
-                NotificationControl.clearNotifications(MainActivity.this);
-                String username = this.getSharedPreferences("BabyLogin", Context.MODE_PRIVATE).getString("keyName", "");
-                if(username!=null)
-                    NotificationControl.seenNotifications(username);
+          //      NotificationControl.clearNotifications(MainActivity.this);
+          //     String username = this.getSharedPreferences("BabyLogin", Context.MODE_PRIVATE).getString("keyName", "");
+          //      if(username!=null)
+              //      NotificationControl.seenNotifications(username);
           //  }
         //}
             super.onResume();
@@ -79,7 +80,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
                     MainActivity.class
                     //Notification.class
                     );
-            task.execute(username);
+          //  task.execute(username);
         }
         txtName = (TextView) findViewById(R.id.username);
         txtEmail = (TextView) findViewById(R.id.email);
@@ -194,7 +195,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         switch(v.getId()) {
 
             case R.id.Notification:
-                startActivity(new Intent(this, Notification.class));
+                startActivity(new Intent(this, RecyclerViewExample.class));
                 break;
 
             case R.id.Profile:

@@ -74,22 +74,26 @@ public class BabysitterAct extends AppCompatActivity implements View.OnClickList
     }
 
     public void showDiaper(View v) {
-        Intent i = new Intent(this,EatingActivity.class);
+        Intent i = new Intent(this,PlayingActivity.class);
+        i.putExtra("activity","Eating");
         startActivity(i);
     }
 
     public void showPlaying(View v) {
         Intent i = new Intent(this,PlayingActivity.class);
+        i.putExtra("activity","Playing");
         startActivity(i);
     }
 
     public void showSleepingDialog(View v) {
-        Intent i = new Intent(this,SleepingActivity.class);
+        Intent i = new Intent(this,PlayingActivity.class);
+        i.putExtra("activity","Sleeping");
         startActivity(i);
     }
 
     public void showMoodDialog(View v) {
-        Intent i = new Intent(this,MoodActivity.class);
+        Intent i = new Intent(this,PlayingActivity.class);
+        i.putExtra("activity","Mood");
         startActivity(i);
     }
 

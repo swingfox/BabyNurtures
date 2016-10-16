@@ -3,6 +3,7 @@ package com.example.willthespoderman.babynurtures.activity;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,8 +20,13 @@ import com.example.willthespoderman.babynurtures.R;
 import com.example.willthespoderman.babynurtures.app.NotificationControl;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Notification extends AppCompatActivity {
+
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private ArrayList<String> mDataSet;
 
     ListView notificationList;
     @Override
@@ -40,7 +46,7 @@ public class Notification extends AppCompatActivity {
             notificationList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    ((SwipeLayout)(notificationList.getChildAt(position - notificationList.getFirstVisiblePosition()))).open(true);
+//                    ((SwipeLayout)(notificationList.getChildAt(position - notificationList.getFirstVisiblePosition()))).open(true);
                 }
             });
             notificationList.setOnTouchListener(new View.OnTouchListener() {

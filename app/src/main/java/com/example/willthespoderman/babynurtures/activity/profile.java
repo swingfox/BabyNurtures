@@ -38,7 +38,7 @@ public class profile extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = profile.class.getSimpleName();
 
     private static String http = "http://";
-    private static  String ip = "172.31.11.32:80";
+    private static  String ip = "192.168.15.4:80";
     private String picturedirectory=http+ip+"/android_login_api/";
     private static final String SERVER_ADDRESS =  http+ip+"/android_login_api/Savepictures.php";
     private Uri selectedImage;

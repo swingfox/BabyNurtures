@@ -21,6 +21,7 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashMap;
 
 /**
  * Created by osias on 11/28/2015.
@@ -80,11 +81,11 @@ public class NotificationControl {
         return false;
     }
 
-    public static void seenNotifications(String username) {
+    public static void seenNotifications(String username,String id) {
         StrictMode.ThreadPolicy s = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(s);
         HttpClient client = new DefaultHttpClient();
-        String url = AppConfig.URL_SEENNOTIFICATION+"?username="+username;
+        String url = AppConfig.URL_SEENNOTIFICATION+"?username="+username+"&"+"id="+id;
         HttpGet get = new HttpGet(url);
         try {
             client.execute(get);
@@ -132,6 +133,30 @@ public class NotificationControl {
             e.printStackTrace();
         }
         return  messages;
+
+    }
+
+    public static  HashMap<String,String> getAllNotificationsWithIdInMessage(String user) throws IOException {
+        String []messages = new String[0];
+        HashMap<String,String> notif = new HashMap<String,String>();
+        try {
+            JSONArray array = getALlNotificationInJSONArray(user);
+            messages = new String[array.length()];
+
+            if (messages.length > 0) {
+                for (int i = 0; i < array.length(); i++) {
+                    JSONObject obj = array.getJSONObject(i);
+                    messages[i] = obj.getString("sender") + ": " + obj.getString("message");
+                    notif.put(messages[i],obj.getString("id"));
+                }
+                return notif;
+            }
+            previouseNotifs = messages.length;
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return  notif;
 
     }
     public static int previouseNotifs = 0;

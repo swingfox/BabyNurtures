@@ -32,8 +32,8 @@ public class Babysitter_Main extends AppCompatActivity implements View.OnClickLi
     protected void onResume() {
         NotificationControl.clearNotifications(Babysitter_Main.this);
         String username = this.getSharedPreferences("BabyLogin", Context.MODE_PRIVATE).getString("keyName", "");
-        if(username!=null)
-            NotificationControl.seenNotifications(username);
+     //   if(username!=null)
+     //       NotificationControl.seenNotifications(username);
         super.onResume();
     }
 
